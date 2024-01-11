@@ -16,8 +16,27 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from AppWeb.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('AppWeb/', include('AppWeb.urls')),
+
+    #URLs de la app
+    path('', inicio, name='Inicio'),
+    path('inicio/', inicio, name='Inicio'),
+    path('carta/', carta, name='Carta'),
+    path('pedido/', pedido, name='Pedido'),
+
+    #URLs de los modelos creados
+    path('comida/', comida, name='Comidas'),
+    path('bebida/', bebida, name='Bebidas'),
+    path('guarnicion/', guarnicion, name='Guarniciones'),
+    path('postre/', postre, name='Postres'),
+
+    #URLs para agregar elementos
+    path('agregarComida/', agregarComida, name='Agregar Comida'),
+    path('agregarBebida/', agregarBebida, name='Agregar Bebida'),
+    path('agregarGuarnicion/', agregarGuarnicion, name='Agregar Guarnicion'),
+    path('agregarPostre/', agregarPostre, name='Agregar Postre'),
+
 ]

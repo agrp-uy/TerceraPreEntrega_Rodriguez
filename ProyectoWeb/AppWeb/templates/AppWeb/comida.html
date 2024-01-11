@@ -11,7 +11,16 @@
 {% endblock %}
 
 {% block contenido %}
+
     <div class="text-center mt-4">
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Aquí podrás encontrar todas las opciones de comidas que tenemos para ti</h2>
     </div>
+
+    {% for comida in comidas %}
+        <p>{{ comida.nombre }} .......... {{ comida.descripcion }} .......... ${{ comida.precio }}</p>
+        <hr>
+    {% endfor %}
+
+    <a href="/agregarComida/" class="btn btn-primary btn-xl" id="submitButton">Agregar Comida</a>
+
 {% endblock %}

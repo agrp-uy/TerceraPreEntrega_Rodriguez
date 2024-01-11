@@ -14,4 +14,12 @@
     <div class="text-center mt-4">
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Aquí podrás encontrar todas las opciones de bebidas que tenemos para ti</h2>
     </div>
+
+    {% for bebida in bebidas %}
+        <p>{{ bebida.nombre }} .......... {{ bebida.descripcion }} .......... ${{ bebida.precio }}</p>
+        <hr>
+    {% endfor %}
+
+    <a href="/agregarBebida/" class="btn btn-primary btn-xl" id="submitButton">Agregar Bebida</a>
+
 {% endblock %}

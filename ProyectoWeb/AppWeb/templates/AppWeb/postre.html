@@ -14,4 +14,12 @@
     <div class="text-center mt-4">
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Aquí podrás encontrar todas las opciones de postres que tenemos para ti</h2>
     </div>
+
+    {% for postre in postres %}
+        <p>{{ postre.nombre }} .......... {{ postre.descripcion }} .......... ${{ postre.precio }}</p>
+        <hr>
+    {% endfor %}
+
+    <a href="/agregarPostre/" class="btn btn-primary btn-xl" id="submitButton">Agregar Postre</a>
+
 {% endblock %}

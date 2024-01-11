@@ -11,15 +11,23 @@
 {% endblock %}
 
 {% block contenido %}
+    <br>
+    <br>
     <div class="text-center mt-4">
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Aquí podrás encontrar todas las opciones de postres que tenemos para ti</h2>
     </div>
-
+    <br>
+    <hr>
+    <div class="text-center text-dark">
     {% for postre in postres %}
         <p>{{ postre.nombre }} .......... {{ postre.descripcion }} .......... ${{ postre.precio }}</p>
         <hr>
     {% endfor %}
-
-    <a href="/agregarPostre/" class="btn btn-primary btn-xl" id="submitButton">Agregar Postre</a>
-
+    <br>
+    <div class="d-flex justify-content-center">
+        <a href="/agregarPostre/" class="btn btn-primary btn-xl" id="submitButton" style="margin-right: 10px">Agregar Postre</a>
+        <a href="/buscarPostre/" class="btn btn-primary btn-xl" id="submitButton">Buscar Postre</a>
+    </div>
+    <br>
+    <br>
 {% endblock %}

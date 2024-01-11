@@ -39,4 +39,14 @@ urlpatterns = [
     path('agregarGuarnicion/', agregarGuarnicion, name='Agregar Guarnicion'),
     path('agregarPostre/', agregarPostre, name='Agregar Postre'),
 
+    #URLs para buscar elementos
+    path('buscarComida/', buscarComida, name='Buscar Comida'),
+    path('resultadosComida/', resultadosComida, name='Resultados Comida'),
+    path('buscarBebida/', buscarBebida, name='Buscar Bebida'),
+    path('resultadosBebida/', resultadosBebida, name='Resultados Bebida'),
+    path('buscarGuarnicion/', buscarGuarnicion, name='Buscar Guarnicion'),
+    path('resultadosGuarnicion/', resultadosGuarnicion, name='Resultados Guarnicion'),
+    path('buscarPostre/', buscarPostre, name='Buscar Postre'),
+    path('resultadosPostre/', resultadosPostre, name='Resultados Postre'),
+
 ]

@@ -11,15 +11,25 @@
 {% endblock %}
 
 {% block contenido %}
+    <br>
+    <br>
     <div class="text-center mt-4">
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Aquí podrás encontrar todas las opciones de guarniciones que tenemos para ti</h2>
     </div>
-
+    <br>
+    <hr>
+    <div class="text-center text-dark">
     {% for guarnicion in guarniciones %}
         <p>{{ guarnicion.nombre }} .......... {{ guarnicion.descripcion }} .......... ${{ guarnicion.precio }}</p>
         <hr>
     {% endfor %}
-
-    <a href="/agregarGuarnicion/" class="btn btn-primary btn-xl" id="submitButton">Agregar Guarnición</a>
+    </div>
+    <br>
+    <div class="d-flex justify-content-center">
+        <a href="/agregarGuarnicion/" class="btn btn-primary btn-xl" id="submitButton" style="margin-right: 10px">Agregar Guarnición</a>
+        <a href="/buscarGuarnicion/" class="btn btn-primary btn-xl" id="submitButton">Buscar Guarnición</a>
+    </div>
+    <br>
+    <br>
 
 {% endblock %}

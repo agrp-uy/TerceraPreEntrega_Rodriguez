@@ -11,15 +11,22 @@
 {% endblock %}
 
 {% block contenido %}
+    <br>
+    <br>
     <div class="text-center mt-4">
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Agreguemos la opción de comida que prefieres</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Agreguemos la opción de bebida que prefieres</h2>
     </div>
-
+    <br>
+    <br>
+    <div class="text-center text-success">
     <form action="/agregarBebida/" method="POST"> {% csrf_token %}
 
         {{formu_b.as_p}}
 
-        <input type="submit" value="Guardar">
+        <input type="submit" value="Guardar" class="btn btn-primary">
     </form>
+    </div>
+    <br>
+    <br>
 
 {% endblock %}
